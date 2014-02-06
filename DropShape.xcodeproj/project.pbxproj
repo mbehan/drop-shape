@@ -21,6 +21,7 @@
 		A50D4C0418A431EE009C79EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50D4BE618A431ED009C79EE /* UIKit.framework */; };
 		A50D4C0C18A431EE009C79EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A50D4C0A18A431EE009C79EE /* InfoPlist.strings */; };
 		A50D4C0E18A431EE009C79EE /* DropShapeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A50D4C0D18A431EE009C79EE /* DropShapeTests.m */; };
+		A50D4C1918A43314009C79EE /* DropShapeDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A50D4C1818A43314009C79EE /* DropShapeDrawingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		A50D4C0918A431EE009C79EE /* DropShapeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropShapeTests-Info.plist"; sourceTree = "<group>"; };
 		A50D4C0B18A431EE009C79EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A50D4C0D18A431EE009C79EE /* DropShapeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropShapeTests.m; sourceTree = "<group>"; };
+		A50D4C1718A43314009C79EE /* DropShapeDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropShapeDrawingView.h; sourceTree = "<group>"; };
+		A50D4C1818A43314009C79EE /* DropShapeDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropShapeDrawingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				A50D4BF818A431ED009C79EE /* ViewController.m */,
 				A50D4BFA18A431ED009C79EE /* Images.xcassets */,
 				A50D4BE918A431ED009C79EE /* Supporting Files */,
+				A50D4C1718A43314009C79EE /* DropShapeDrawingView.h */,
+				A50D4C1818A43314009C79EE /* DropShapeDrawingView.m */,
 			);
 			path = DropShape;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			files = (
 				A50D4BF918A431ED009C79EE /* ViewController.m in Sources */,
 				A50D4BF318A431ED009C79EE /* AppDelegate.m in Sources */,
+				A50D4C1918A43314009C79EE /* DropShapeDrawingView.m in Sources */,
 				A50D4BEF18A431ED009C79EE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
