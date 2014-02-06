@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="ewj-2S-vwr"/>
                         <viewControllerLayoutGuide type="bottom" id="Tr3-AD-fFt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="DropShapeDrawingView">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="SimplePathDrawingView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

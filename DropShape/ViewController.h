@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DropShapeDrawingView.h"
+#import "SimplePathDrawingView.h"
 
-@interface ViewController : UIViewController<DropShapeDrawingDelegate>
+@interface ViewController : UIViewController<SimplePathDrawingDelegate>
 
 @end
