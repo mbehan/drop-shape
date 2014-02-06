@@ -14,10 +14,18 @@
 
 @implementation ViewController
 
+-(void)drawingViewCreatedPath:(UIBezierPath *)path
+{
+    NSLog(@"HAVE SHAPE");
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Do any additional setup after loading the view, typically from a nib.
+    DropShapeDrawingView *drawingView = (DropShapeDrawingView *)self.view;
+    drawingView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning

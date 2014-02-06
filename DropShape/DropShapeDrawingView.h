@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DropShapeDrawingDelegate <NSObject>
+
+-(void)drawingViewCreatedPath:(UIBezierPath *)path;
+
+@end
+
 @interface DropShapeDrawingView : UIView
+
+@property(nonatomic, weak)id<DropShapeDrawingDelegate> delegate;
 
 @end

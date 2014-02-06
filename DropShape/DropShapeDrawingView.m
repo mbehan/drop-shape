@@ -42,6 +42,7 @@
     }
     else
     {
+        [_delegate drawingViewCreatedPath:drawingPath];
         drawingPath = nil;
     }
     [self setNeedsDisplay];
