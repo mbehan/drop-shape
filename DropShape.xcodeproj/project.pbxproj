@@ -22,6 +22,9 @@
 		A50D4C0C18A431EE009C79EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A50D4C0A18A431EE009C79EE /* InfoPlist.strings */; };
 		A50D4C0E18A431EE009C79EE /* DropShapeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A50D4C0D18A431EE009C79EE /* DropShapeTests.m */; };
 		A50D4C1918A43314009C79EE /* SimplePathDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A50D4C1818A43314009C79EE /* SimplePathDrawingView.m */; };
+		A50D4C1B18A450F0009C79EE /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50D4C1A18A450F0009C79EE /* SpriteKit.framework */; };
+		A50D4C1E18A455BD009C79EE /* UIBezierPath+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = A50D4C1D18A455BD009C79EE /* UIBezierPath+Image.m */; };
+		A50D4C2118A4592D009C79EE /* DropShapeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A50D4C2018A4592D009C79EE /* DropShapeScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,11 @@
 		A50D4C0D18A431EE009C79EE /* DropShapeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropShapeTests.m; sourceTree = "<group>"; };
 		A50D4C1718A43314009C79EE /* SimplePathDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePathDrawingView.h; sourceTree = "<group>"; };
 		A50D4C1818A43314009C79EE /* SimplePathDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePathDrawingView.m; sourceTree = "<group>"; };
+		A50D4C1A18A450F0009C79EE /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		A50D4C1C18A455BD009C79EE /* UIBezierPath+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Image.h"; sourceTree = "<group>"; };
+		A50D4C1D18A455BD009C79EE /* UIBezierPath+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Image.m"; sourceTree = "<group>"; };
+		A50D4C1F18A4592D009C79EE /* DropShapeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropShapeScene.h; sourceTree = "<group>"; };
+		A50D4C2018A4592D009C79EE /* DropShapeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropShapeScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50D4C1B18A450F0009C79EE /* SpriteKit.framework in Frameworks */,
 				A50D4BE518A431ED009C79EE /* CoreGraphics.framework in Frameworks */,
 				A50D4BE718A431ED009C79EE /* UIKit.framework in Frameworks */,
 				A50D4BE318A431ED009C79EE /* Foundation.framework in Frameworks */,
@@ -85,6 +94,8 @@
 		A50D4BD618A431ED009C79EE = {
 			isa = PBXGroup;
 			children = (
+				A50D4C1C18A455BD009C79EE /* UIBezierPath+Image.h */,
+				A50D4C1D18A455BD009C79EE /* UIBezierPath+Image.m */,
 				A50D4BE818A431ED009C79EE /* DropShape */,
 				A50D4C0718A431EE009C79EE /* DropShapeTests */,
 				A50D4BE118A431ED009C79EE /* Frameworks */,
@@ -104,6 +115,7 @@
 		A50D4BE118A431ED009C79EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A50D4C1A18A450F0009C79EE /* SpriteKit.framework */,
 				A50D4BE218A431ED009C79EE /* Foundation.framework */,
 				A50D4BE418A431ED009C79EE /* CoreGraphics.framework */,
 				A50D4BE618A431ED009C79EE /* UIKit.framework */,
@@ -124,6 +136,8 @@
 				A50D4BE918A431ED009C79EE /* Supporting Files */,
 				A50D4C1718A43314009C79EE /* SimplePathDrawingView.h */,
 				A50D4C1818A43314009C79EE /* SimplePathDrawingView.m */,
+				A50D4C1F18A4592D009C79EE /* DropShapeScene.h */,
+				A50D4C2018A4592D009C79EE /* DropShapeScene.m */,
 			);
 			path = DropShape;
 			sourceTree = "<group>";
@@ -255,6 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50D4BF918A431ED009C79EE /* ViewController.m in Sources */,
+				A50D4C2118A4592D009C79EE /* DropShapeScene.m in Sources */,
+				A50D4C1E18A455BD009C79EE /* UIBezierPath+Image.m in Sources */,
 				A50D4BF318A431ED009C79EE /* AppDelegate.m in Sources */,
 				A50D4C1918A43314009C79EE /* SimplePathDrawingView.m in Sources */,
 				A50D4BEF18A431ED009C79EE /* main.m in Sources */,
