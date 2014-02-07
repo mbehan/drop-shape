@@ -12,11 +12,22 @@
                         <viewControllerLayoutGuide type="top" id="ewj-2S-vwr"/>
                         <viewControllerLayoutGuide type="bottom" id="Tr3-AD-fFt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="SimplePathDrawingView">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJp-ZI-gkU" customClass="SimplePathDrawingView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="drawingView" destination="xJp-ZI-gkU" id="vnC-Cy-DUd"/>
+                        <outlet property="view" destination="kh9-bI-dsS" id="5Gh-2R-Mfi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,11 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "UIBezierPath+Image.h"
+#import <SpriteKit/SpriteKit.h>
+#import "DropShapeScene.h"
 
 @interface ViewController ()
 {
-    UIDynamicAnimator *animator;
-    UIGravityBehavior *gravity;
 }
 @end
 
@@ -19,17 +20,15 @@
 
 -(void)drawingViewCreatedPath:(UIBezierPath *)path
 {
-    UIView *shapeView = [[UIView alloc] initWithFrame:self.view.bounds];
+    UIImage *image = [path strokeImageWithColor:[UIColor greenColor]];
     
-    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-    shapeLayer.path = path.CGPath;
-    shapeLayer.fillColor = [UIColor blackColor].CGColor;
-    
-    [shapeView.layer addSublayer:shapeLayer];
-    
+    UIImageView *shapeView = [[UIImageView alloc] initWithImage:image];
+    shapeView.center = self.view.center;
+    shapeView.frame = CGPathGetPathBoundingBox(path.CGPath);
     [self.view addSubview:shapeView];
     
-    [gravity addItem:shapeView];
+    //[gravity addItem:shapeView];
+    
 }
 
 - (void)viewDidLoad
@@ -37,13 +36,20 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
-    SimplePathDrawingView *drawingView = (SimplePathDrawingView *)self.view;
-    drawingView.delegate = self;
+    _drawingView.delegate = self;
     
-    animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-    gravity = [[UIGravityBehavior alloc] init];
-    [animator addBehavior:gravity];
+    SKView *spriteView = (SKView *) self.view;
+    spriteView.showsDrawCount = YES;
+    spriteView.showsNodeCount = YES;
+    spriteView.showsFPS = YES;
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    DropShapeScene* scene = [[DropShapeScene alloc] initWithSize:self.view.bounds.size];
+    SKView *spriteView = (SKView *) self.view;
+    [spriteView presentScene: scene];
 }
 
 - (void)didReceiveMemoryWarning

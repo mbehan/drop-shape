@@ -11,4 +11,7 @@
 
 @interface ViewController : UIViewController<SimplePathDrawingDelegate>
 
+@property (weak, nonatomic) IBOutlet SimplePathDrawingView *drawingView;
+
+
 @end
