@@ -50,7 +50,6 @@
     
     NSArray *convexHull = chainHull_2D(sortedPoints);
     
-    
     UIBezierPath *hullPath = [UIBezierPath pathWithPoints:convexHull];
     
     UIBezierPath *reducedHullPath = hullPath;
@@ -59,15 +58,12 @@
     while ([reducedHullPath.points count] > 11) {
         tolerance += 0.1;
         reducedHullPath = thinPath(reducedHullPath, tolerance);
-        
-        NSLog(@"POINTS %lu",(unsigned long)[reducedHullPath.points count]);
     }
     
     NSArray *reducedHullPoints = reducedHullPath.points;
     CGMutablePathRef returnPath = CGPathCreateMutable();
     
     CGRect pathBounds = CGPathGetPathBoundingBox(reducedHullPath.CGPath);
-    
     
     CGPoint point = [reducedHullPoints[0] CGPointValue];
     CGPathMoveToPoint(returnPath, NULL, point.x- pathBounds.origin.x - (pathBounds.size.width / 2.0), -1 *(((point.y - pathBounds.origin.y) - (pathBounds.size.height / 2.0))));
