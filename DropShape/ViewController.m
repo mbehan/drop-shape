@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "UIBezierPath+Image.h"
-#import "UIBezierPath+Points.h"
+#import "SKPhysicsBody+ConvexHull.h"
 #import <SpriteKit/SpriteKit.h>
 #import "DropShapeScene.h"
 
@@ -28,11 +28,9 @@
     SKTexture *shapeTexture = [SKTexture textureWithImage:image];
     SKSpriteNode *shapeSprite = [SKSpriteNode spriteNodeWithTexture:shapeTexture size:pathBounds.size];
     
-    CGPathRef physicsPath = [path physicsBodyPolyForNode:shapeSprite inScene:scene];
-    
     shapeSprite.position = CGPointMake(pathBounds.origin.x + (pathBounds.size.width/2.0), scene.frame.size.height - pathBounds.origin.y - (pathBounds.size.height/2.0));
     
-    shapeSprite.physicsBody = [SKPhysicsBody bodyWithPolygonFromPath:physicsPath];
+    shapeSprite.physicsBody = [SKPhysicsBody bodyWithConvexHullFromPath:path];
     shapeSprite.physicsBody.dynamic = YES;
     [scene addChild:shapeSprite];
     

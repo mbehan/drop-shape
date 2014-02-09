@@ -26,7 +26,8 @@
 		A50D4C1E18A455BD009C79EE /* UIBezierPath+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = A50D4C1D18A455BD009C79EE /* UIBezierPath+Image.m */; };
 		A50D4C2118A4592D009C79EE /* DropShapeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A50D4C2018A4592D009C79EE /* DropShapeScene.m */; };
 		A51911AA18A50686004090C8 /* UIBezierPath+Points.m in Sources */ = {isa = PBXBuildFile; fileRef = A51911A918A50686004090C8 /* UIBezierPath+Points.m */; };
-		A55F8C7E18A79E58008F27EB /* UIBezierPath-Thinning.m in Sources */ = {isa = PBXBuildFile; fileRef = A55F8C7D18A79E58008F27EB /* UIBezierPath-Thinning.m */; };
+		A55F8C7E18A79E58008F27EB /* UIBezierPath+Thinning.m in Sources */ = {isa = PBXBuildFile; fileRef = A55F8C7D18A79E58008F27EB /* UIBezierPath+Thinning.m */; };
+		A55F8C8118A81DDC008F27EB /* SKPhysicsBody+ConvexHull.m in Sources */ = {isa = PBXBuildFile; fileRef = A55F8C8018A81DDC008F27EB /* SKPhysicsBody+ConvexHull.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +69,10 @@
 		A50D4C2018A4592D009C79EE /* DropShapeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropShapeScene.m; sourceTree = "<group>"; };
 		A51911A818A50686004090C8 /* UIBezierPath+Points.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Points.h"; sourceTree = "<group>"; };
 		A51911A918A50686004090C8 /* UIBezierPath+Points.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Points.m"; sourceTree = "<group>"; };
-		A55F8C7C18A79E58008F27EB /* UIBezierPath-Thinning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath-Thinning.h"; sourceTree = "<group>"; };
-		A55F8C7D18A79E58008F27EB /* UIBezierPath-Thinning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath-Thinning.m"; sourceTree = "<group>"; };
+		A55F8C7C18A79E58008F27EB /* UIBezierPath+Thinning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Thinning.h"; sourceTree = "<group>"; };
+		A55F8C7D18A79E58008F27EB /* UIBezierPath+Thinning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Thinning.m"; sourceTree = "<group>"; };
+		A55F8C7F18A81DDC008F27EB /* SKPhysicsBody+ConvexHull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKPhysicsBody+ConvexHull.h"; sourceTree = "<group>"; };
+		A55F8C8018A81DDC008F27EB /* SKPhysicsBody+ConvexHull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKPhysicsBody+ConvexHull.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				A50D4C1818A43314009C79EE /* SimplePathDrawingView.m */,
 				A50D4C1F18A4592D009C79EE /* DropShapeScene.h */,
 				A50D4C2018A4592D009C79EE /* DropShapeScene.m */,
+				A55F8C7F18A81DDC008F27EB /* SKPhysicsBody+ConvexHull.h */,
+				A55F8C8018A81DDC008F27EB /* SKPhysicsBody+ConvexHull.m */,
 			);
 			path = DropShape;
 			sourceTree = "<group>";
@@ -183,8 +188,8 @@
 				A50D4C1D18A455BD009C79EE /* UIBezierPath+Image.m */,
 				A51911A818A50686004090C8 /* UIBezierPath+Points.h */,
 				A51911A918A50686004090C8 /* UIBezierPath+Points.m */,
-				A55F8C7C18A79E58008F27EB /* UIBezierPath-Thinning.h */,
-				A55F8C7D18A79E58008F27EB /* UIBezierPath-Thinning.m */,
+				A55F8C7C18A79E58008F27EB /* UIBezierPath+Thinning.h */,
+				A55F8C7D18A79E58008F27EB /* UIBezierPath+Thinning.m */,
 			);
 			name = "UIBezierPath Categorys";
 			sourceTree = "<group>";
@@ -288,11 +293,12 @@
 			files = (
 				A51911AA18A50686004090C8 /* UIBezierPath+Points.m in Sources */,
 				A50D4BF918A431ED009C79EE /* ViewController.m in Sources */,
-				A55F8C7E18A79E58008F27EB /* UIBezierPath-Thinning.m in Sources */,
+				A55F8C7E18A79E58008F27EB /* UIBezierPath+Thinning.m in Sources */,
 				A50D4C2118A4592D009C79EE /* DropShapeScene.m in Sources */,
 				A50D4C1E18A455BD009C79EE /* UIBezierPath+Image.m in Sources */,
 				A50D4BF318A431ED009C79EE /* AppDelegate.m in Sources */,
 				A50D4C1918A43314009C79EE /* SimplePathDrawingView.m in Sources */,
+				A55F8C8118A81DDC008F27EB /* SKPhysicsBody+ConvexHull.m in Sources */,
 				A50D4BEF18A431ED009C79EE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
