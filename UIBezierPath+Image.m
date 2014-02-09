@@ -2,8 +2,7 @@
 //  UIBezierPath+Image.m
 //  DropShape
 //
-//  Created by Michael Behan on 06/02/2014.
-//  Copyright (c) 2014 Michael Behan. All rights reserved.
+//  http://stackoverflow.com/questions/17408209/how-to-create-a-image-with-uibezierpath/17408397#17408397
 //
 
 #import "UIBezierPath+Image.h"
