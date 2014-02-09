@@ -8,11 +8,13 @@
 
 #import "ViewController.h"
 #import "UIBezierPath+Image.h"
+#import "UIBezierPath+Points.h"
 #import <SpriteKit/SpriteKit.h>
 #import "DropShapeScene.h"
 
 @interface ViewController ()
 {
+    DropShapeScene* scene;
 }
 @end
 
@@ -20,14 +22,19 @@
 
 -(void)drawingViewCreatedPath:(UIBezierPath *)path
 {
+    CGRect pathBounds = CGPathGetPathBoundingBox(path.CGPath);
+    
     UIImage *image = [path strokeImageWithColor:[UIColor greenColor]];
+    SKTexture *shapeTexture = [SKTexture textureWithImage:image];
+    SKSpriteNode *shapeSprite = [SKSpriteNode spriteNodeWithTexture:shapeTexture size:pathBounds.size];
     
-    UIImageView *shapeView = [[UIImageView alloc] initWithImage:image];
-    shapeView.center = self.view.center;
-    shapeView.frame = CGPathGetPathBoundingBox(path.CGPath);
-    [self.view addSubview:shapeView];
+    CGPathRef physicsPath = [path physicsBodyPolyForNode:shapeSprite inScene:scene];
     
-    //[gravity addItem:shapeView];
+    shapeSprite.position = CGPointMake(pathBounds.origin.x + (pathBounds.size.width/2.0), scene.frame.size.height - pathBounds.origin.y - (pathBounds.size.height/2.0));
+    
+    shapeSprite.physicsBody = [SKPhysicsBody bodyWithPolygonFromPath:physicsPath];
+    shapeSprite.physicsBody.dynamic = YES;
+    [scene addChild:shapeSprite];
     
 }
 
@@ -45,9 +52,10 @@
     
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
-    DropShapeScene* scene = [[DropShapeScene alloc] initWithSize:self.view.bounds.size];
+    scene = [[DropShapeScene alloc] initWithSize:self.view.bounds.size];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
     SKView *spriteView = (SKView *) self.view;
     [spriteView presentScene: scene];
 }

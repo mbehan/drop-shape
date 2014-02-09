@@ -25,6 +25,8 @@
 		A50D4C1B18A450F0009C79EE /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50D4C1A18A450F0009C79EE /* SpriteKit.framework */; };
 		A50D4C1E18A455BD009C79EE /* UIBezierPath+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = A50D4C1D18A455BD009C79EE /* UIBezierPath+Image.m */; };
 		A50D4C2118A4592D009C79EE /* DropShapeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A50D4C2018A4592D009C79EE /* DropShapeScene.m */; };
+		A51911AA18A50686004090C8 /* UIBezierPath+Points.m in Sources */ = {isa = PBXBuildFile; fileRef = A51911A918A50686004090C8 /* UIBezierPath+Points.m */; };
+		A55F8C7E18A79E58008F27EB /* UIBezierPath-Thinning.m in Sources */ = {isa = PBXBuildFile; fileRef = A55F8C7D18A79E58008F27EB /* UIBezierPath-Thinning.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +62,14 @@
 		A50D4C1718A43314009C79EE /* SimplePathDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePathDrawingView.h; sourceTree = "<group>"; };
 		A50D4C1818A43314009C79EE /* SimplePathDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePathDrawingView.m; sourceTree = "<group>"; };
 		A50D4C1A18A450F0009C79EE /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		A50D4C1C18A455BD009C79EE /* UIBezierPath+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Image.h"; sourceTree = "<group>"; };
-		A50D4C1D18A455BD009C79EE /* UIBezierPath+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Image.m"; sourceTree = "<group>"; };
+		A50D4C1C18A455BD009C79EE /* UIBezierPath+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBezierPath+Image.h"; path = "../UIBezierPath+Image.h"; sourceTree = "<group>"; };
+		A50D4C1D18A455BD009C79EE /* UIBezierPath+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBezierPath+Image.m"; path = "../UIBezierPath+Image.m"; sourceTree = "<group>"; };
 		A50D4C1F18A4592D009C79EE /* DropShapeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropShapeScene.h; sourceTree = "<group>"; };
 		A50D4C2018A4592D009C79EE /* DropShapeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropShapeScene.m; sourceTree = "<group>"; };
+		A51911A818A50686004090C8 /* UIBezierPath+Points.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Points.h"; sourceTree = "<group>"; };
+		A51911A918A50686004090C8 /* UIBezierPath+Points.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Points.m"; sourceTree = "<group>"; };
+		A55F8C7C18A79E58008F27EB /* UIBezierPath-Thinning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath-Thinning.h"; sourceTree = "<group>"; };
+		A55F8C7D18A79E58008F27EB /* UIBezierPath-Thinning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath-Thinning.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,6 @@
 		A50D4BD618A431ED009C79EE = {
 			isa = PBXGroup;
 			children = (
-				A50D4C1C18A455BD009C79EE /* UIBezierPath+Image.h */,
-				A50D4C1D18A455BD009C79EE /* UIBezierPath+Image.m */,
 				A50D4BE818A431ED009C79EE /* DropShape */,
 				A50D4C0718A431EE009C79EE /* DropShapeTests */,
 				A50D4BE118A431ED009C79EE /* Frameworks */,
@@ -127,6 +131,7 @@
 		A50D4BE818A431ED009C79EE /* DropShape */ = {
 			isa = PBXGroup;
 			children = (
+				A51911AB18A5068A004090C8 /* UIBezierPath Categorys */,
 				A50D4BF118A431ED009C79EE /* AppDelegate.h */,
 				A50D4BF218A431ED009C79EE /* AppDelegate.m */,
 				A50D4BF418A431ED009C79EE /* Main.storyboard */,
@@ -169,6 +174,19 @@
 				A50D4C0A18A431EE009C79EE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A51911AB18A5068A004090C8 /* UIBezierPath Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				A50D4C1C18A455BD009C79EE /* UIBezierPath+Image.h */,
+				A50D4C1D18A455BD009C79EE /* UIBezierPath+Image.m */,
+				A51911A818A50686004090C8 /* UIBezierPath+Points.h */,
+				A51911A918A50686004090C8 /* UIBezierPath+Points.m */,
+				A55F8C7C18A79E58008F27EB /* UIBezierPath-Thinning.h */,
+				A55F8C7D18A79E58008F27EB /* UIBezierPath-Thinning.m */,
+			);
+			name = "UIBezierPath Categorys";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51911AA18A50686004090C8 /* UIBezierPath+Points.m in Sources */,
 				A50D4BF918A431ED009C79EE /* ViewController.m in Sources */,
+				A55F8C7E18A79E58008F27EB /* UIBezierPath-Thinning.m in Sources */,
 				A50D4C2118A4592D009C79EE /* DropShapeScene.m in Sources */,
 				A50D4C1E18A455BD009C79EE /* UIBezierPath+Image.m in Sources */,
 				A50D4BF318A431ED009C79EE /* AppDelegate.m in Sources */,
@@ -482,6 +502,7 @@
 				A50D4C1318A431EE009C79EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A50D4C1418A431EE009C79EE /* Build configuration list for PBXNativeTarget "DropShapeTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +511,7 @@
 				A50D4C1618A431EE009C79EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
