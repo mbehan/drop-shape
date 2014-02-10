@@ -50,7 +50,7 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillLayoutSubviews
 {
     scene = [[DropShapeScene alloc] initWithSize:self.view.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
