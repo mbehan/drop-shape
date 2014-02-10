@@ -77,6 +77,9 @@
     return [SKPhysicsBody bodyWithPolygonFromPath:returnPath];
 }
 
+// An objective-c-ified version of the c++ implemnation at
+// http://geomalgorithms.com/a10-_hull-1.html
+
 // Assume that a class is already given for the object:
 //    Point with coordinates {float x, y;}
 //===================================================================
