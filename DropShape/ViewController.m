@@ -41,13 +41,7 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
-    _drawingView.delegate = self;
-    
-    SKView *spriteView = (SKView *) self.view;
-    spriteView.showsDrawCount = YES;
-    spriteView.showsNodeCount = YES;
-    spriteView.showsFPS = YES;
-    
+    _drawingView.delegate = self; 
 }
 
 - (void)viewWillLayoutSubviews
@@ -55,6 +49,9 @@
     scene = [[DropShapeScene alloc] initWithSize:self.view.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     SKView *spriteView = (SKView *) self.view;
+    spriteView.showsDrawCount = YES;
+    spriteView.showsNodeCount = YES;
+    spriteView.showsFPS = YES;
     [spriteView presentScene: scene];
 }
 
