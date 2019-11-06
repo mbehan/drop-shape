@@ -1,4 +1,4 @@
 drop-shape
 ==========
 
-Playing around with drawing physics bodies for SpriteKit. Read about it here: http://tmblr.co/ZUipHx16yZn_n
+Playing around with drawing physics bodies for SpriteKit. Read about it here: https://iosapp.dev/2014/02/09/drawing-physics-spritekit.html
